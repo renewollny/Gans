@@ -9,8 +9,8 @@ The company wants to anticipate as much as possible scooter movements.
 
 The task is to collect data from external sources that can potentially help Gans predict e-scooter movement. Since data is needed every day, in real-time and accessible by everyone in the company, the challenge is going to be to assemble and automate a data pipeline in the cloud.
 
-There are two phases the taks has been devided into:
-1.1 Scrape data from web
+There are two phases the taks has been devided into: /n
+1.1 Scrape data from web /n
 1.2 Collect data with APIs
 1.3 Create database model
 1.4 Store data on local MySQL instance
