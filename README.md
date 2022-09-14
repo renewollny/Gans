@@ -11,18 +11,13 @@ The task is to collect data from external sources that can potentially help Gans
 
 There are two phases the taks has been devided into:
 
-1.1 Scrape data from web
-<br />
-1.2 Collect data with APIs
+1.1 Scrape data from web<br />
+1.2 Collect data with APIs<br />
+1.3 Create database model<br />
+1.4 Store data on local MySQL instance<br /><br />
 
-1.3 Create database model
-
-1.4 Store data on local MySQL instance
-
-2.1 Set up cloud database
-
-2.2 Move the scripts to AWS-Lambda
-
-2.3 Automate the pipeline
+2.1 Set up cloud database<br />
+2.2 Move the scripts to AWS-Lambda<br />
+2.3 Automate the pipeline<br /><br />
 
 Due to financial restrictions the second phase has been done throughout the project, but is not live anymore. That's why only the lamda-functions have been stored in the specific folder in the repo.
