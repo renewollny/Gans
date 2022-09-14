@@ -27,21 +27,21 @@ def lambda_handler(event, context):
     
     # connection to DB and send weather_data from above to SQL
     schema = "gans"
-    host = "wbs-project3-db.cb1kpzn9jpzg.eu-central-1.rds.amazonaws.com"
-    user = "admin"
-    password ="Julchen4ever23!"
-    port = 3306
+    host = 
+    user = 
+    password =
+    port = 
     con = f"mysql+pymysql://{user}:{password}@{host}:{port}/{schema}"
     weather_data.to_sql("weathers", if_exists = "append", con = con, index = False)
 
 # function to get weather-data using API "OpenWeatherMap"
 def get_weather_data(cities):
     weather_list = []
-    url = "http://api.openweathermap.org/data/2.5/forecast?q=Boston&appid=5550c891ab15752a7f20b32fd72ddf09&units=metric"
+    url = "http://api.openweathermap.org/data/2.5/forecast?q=Boston&appid=&units=metric"
     test = requests.get(url)
     if test.status_code >= 200 and test.status_code <= 299:
         for city in cities:
-            url = f"http://api.openweathermap.org/data/2.5/forecast?q={city}&appid=5550c891ab15752a7f20b32fd72ddf09&units=metric"
+            url = f"http://api.openweathermap.org/data/2.5/forecast?q={city}&appid=&units=metric"
             weather = requests.get(url)
             weather_df = pd.json_normalize(weather.json()["list"])
             weather_df["city"] = city
@@ -54,10 +54,10 @@ def get_weather_data(cities):
 # function to connect with DB to retrieve cities (cities have been put into database first using Jupyter notebook)
 def get_cities():
     schema = "gans"
-    host = "wbs-project3-db.cb1kpzn9jpzg.eu-central-1.rds.amazonaws.com"
-    user = "admin"
-    password ="Julchen4ever23!"
-    port = 3306
+    host = 
+    user = 
+    password =
+    port = 
     con = f"mysql+pymysql://{user}:{password}@{host}:{port}/{schema}"
     cities_df = pd.read_sql_table("cities", con=con)
     return cities_df

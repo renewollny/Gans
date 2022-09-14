@@ -48,10 +48,10 @@ def lambda_handler(event, context):
     
     # connection to DB and send flight_data from above to SQL
     schema = "gans"
-    host = "wbs-project3-db.cb1kpzn9jpzg.eu-central-1.rds.amazonaws.com"
-    user = "admin"
-    password ="Julchen4ever23!"
-    port = 3306
+    host = 
+    user = 
+    password = 
+    port = 
     con = f"mysql+pymysql://{user}:{password}@{host}:{port}/{schema}"
     flight_data.to_sql("flights", if_exists = "append", con = con, index = False)
 
@@ -64,7 +64,7 @@ def get_airport_data(latitude, longitude):
     url = "https://aerodatabox.p.rapidapi.com/airports/search/location/51.511142/-0.103869/km/50/10"
     querystring = {"withFlightInfoOnly":"true"}
     headers = {
-        "X-RapidAPI-Key": "7ed975c479msh3e5da9dd4ad15b1p1a24e5jsna7551ab4a9b5",
+        "X-RapidAPI-Key": ,
         "X-RapidAPI-Host": "aerodatabox.p.rapidapi.com"
     }
     test = requests.request("GET", url, headers = headers, params = querystring)
@@ -73,7 +73,7 @@ def get_airport_data(latitude, longitude):
             url = f"https://aerodatabox.p.rapidapi.com/airports/search/location/{latitude[i]}/{longitude[i]}/km/50/10"
             querystring = {"withFlightInfoOnly":"true"}
             headers = {
-                "X-RapidAPI-Key": "7ed975c479msh3e5da9dd4ad15b1p1a24e5jsna7551ab4a9b5", 
+                "X-RapidAPI-Key": , 
                 "X-RapidAPI-Host": "aerodatabox.p.rapidapi.com"
             }
             response = requests.request("GET", url, headers = headers, params = querystring)
@@ -94,7 +94,7 @@ def get_flight_data(icao):
     querystring = {"withLeg":"false","direction":"Arrival","withCancelled":"false","withCodeshared":"true",
                    "withCargo":"false","withPrivate":"false","withLocation":"false"}
     headers = {
-        "X-RapidAPI-Key": "7ed975c479msh3e5da9dd4ad15b1p1a24e5jsna7551ab4a9b5",
+        "X-RapidAPI-Key": ,
         "X-RapidAPI-Host": "aerodatabox.p.rapidapi.com"
     }
     test = requests.request("GET", url, headers = headers, params = querystring)
@@ -105,7 +105,7 @@ def get_flight_data(icao):
                            "withCodeshared":"true","withCargo":"false","withPrivate":"false",
                            "withLocation":"false"}
             headers = {
-                "X-RapidAPI-Key": "7ed975c479msh3e5da9dd4ad15b1p1a24e5jsna7551ab4a9b5",
+                "X-RapidAPI-Key": ,
                 "X-RapidAPI-Host": "aerodatabox.p.rapidapi.com"
             }
             response = requests.request("GET", url, headers = headers, params = querystring)
@@ -120,10 +120,10 @@ def get_flight_data(icao):
 # function to connect with DB to retrieve cities (cities have been put into database first using Jupyter notebook)
 def get_cities():
     schema = "gans"
-    host = "wbs-project3-db.cb1kpzn9jpzg.eu-central-1.rds.amazonaws.com"
-    user = "admin"
-    password ="Julchen4ever23!"
-    port = 3306
+    host = 
+    user = 
+    password =
+    port =
     con = f"mysql+pymysql://{user}:{password}@{host}:{port}/{schema}"
     cities_df = pd.read_sql_table("cities", con=con)
     return cities_df
