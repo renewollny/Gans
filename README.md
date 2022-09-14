@@ -12,7 +12,7 @@ The task is to collect data from external sources that can potentially help Gans
 There are two phases the taks has been devided into:
 
 1.1 Scrape data from web
-
+<br />
 1.2 Collect data with APIs
 
 1.3 Create database model
