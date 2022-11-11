@@ -1,5 +1,6 @@
 # Gans
 ### SQL/Python/AWS-Project from DataScience-Bootcamp
+### Creating Data-Pipelines
 
 Gans is a startup developing an e-scooter-sharing system. It aspires to operate in the most populous cities all around the world. In each city, the company will have hundreds of e-scooters parked in the streets and allow users to rent them by the minute.
 
@@ -20,4 +21,4 @@ There are two phases the taks has been devided into:
 2.2 Move the scripts to AWS-Lambda<br />
 2.3 Automate the pipeline<br /><br />
 
-Due to financial restrictions the second phase has been done throughout the project, but is not live anymore. That's why only the lamda-functions have been stored in the specific folder in the repo.
+Due to financial restrictions the second phase has been done throughout the project, but is not live anymore. That's why only the AWS Lambda-functions have been stored in the specific folder in the repo.
